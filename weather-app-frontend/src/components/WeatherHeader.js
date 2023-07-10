@@ -23,12 +23,11 @@ const WeatherHeader = ({ cityName, setCityName, cities }) => {
           <input
             type="text"
             value={cityName}
-            id="location-name"
             onChange={handleInput}
             onKeyDown={handleInput}
           />
           {showSuggestion ? (
-            <div id="weatherSuggestion" className="weather-suggestion">
+            <div className="weather-suggestion">
               {cities &&
                 cities.map((data, index) => (
                   <span

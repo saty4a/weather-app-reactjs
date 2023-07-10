@@ -27,7 +27,7 @@ const HomePage = () => {
     <div className="weather">
       <WeatherHeader cityName={cityName} setCityName={setCityName} cities={cities} />
       <LocationInfo cityInfo={cityInfo} />
-      <p class="additional-info">
+      <p className="additional-info">
         Make the most of this nice weather that I generated for you. Or else.
       </p>
     </div>
