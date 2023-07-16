@@ -5,8 +5,8 @@ import { getAllCities, getCityInfo } from "../helperFunctions/fetchApi";
 
 const HomePage = () => {
   const [cityName, setCityName] = useState("Bhubaneswar");
-  const [cityInfo, setCityInfo] = useState("");
-  const [cities, setAllCities] = useState("");
+  const [cityInfo, setCityInfo] = useState();
+  const [cities, setAllCities] = useState();
   useEffect(() => {
     getCityInfo(cityName).then((response) => {
       if (response?.success) {
@@ -26,10 +26,14 @@ const HomePage = () => {
   return (
     <div className="weather">
       <WeatherHeader cityName={cityName} setCityName={setCityName} cities={cities} />
+      {cityInfo && 
+      <>
       <LocationInfo cityInfo={cityInfo} />
       <p className="additional-info">
         Make the most of this nice weather that I generated for you. Or else.
       </p>
+      </>
+      }
     </div>
   );
 };
