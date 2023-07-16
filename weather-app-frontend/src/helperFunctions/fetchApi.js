@@ -1,7 +1,7 @@
 export const getCityInfo = async (cityName) => {
   try {
     const response = await fetch(
-      `http://localhost:4000/getinfo/${cityName}`
+      `https://weather-app-backend-nodejs.vercel.app/get-info/${cityName}`
     ).then((data) => {
       return data.json();
     });
@@ -15,7 +15,7 @@ export const getCityInfo = async (cityName) => {
 
 export const getAllCities = async () => {
   try {
-    const response = await fetch("http://localhost:4000/get-all-cities").then(
+    const response = await fetch("https://weather-app-backend-nodejs.vercel.app/get-all-cities").then(
       (data) => {
         return data.json();
       }

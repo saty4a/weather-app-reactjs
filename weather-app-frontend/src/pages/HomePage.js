@@ -9,7 +9,7 @@ const HomePage = () => {
   const [cities, setAllCities] = useState("");
   useEffect(() => {
     getCityInfo(cityName).then((response) => {
-      if (response.success) {
+      if (response?.success) {
         setCityInfo(response.data);
       }
     });
@@ -17,7 +17,7 @@ const HomePage = () => {
 
   useEffect(() => {
     getAllCities().then((response) => {
-      if (response.success) {
+      if (response?.success) {
         setAllCities(response.data);
       }
     });
