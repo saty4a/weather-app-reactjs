@@ -1,5 +1,6 @@
 # weather-app-reactjs
   visit webpage on - https://weather-app-own.vercel.app/
+  <br> tou have to wait some time for data to come.
 # Frontend: 
   used reactJS - run with npm start
 # Backend: 
